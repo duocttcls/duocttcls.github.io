@@ -25,7 +25,7 @@ export const ApiService = {
       left: this.randomLeftPosition(),
       width: `${this.getRandomNumber(150, 250)}px`,
       height: `${this.getRandomNumber(100, 200)}px`,
-      timeScale: 6000,
+      timeScale: 3000,
       timeSlide: 40000,
       textIndent: `${this.getRandomNumber(-50, 50)}px`,
     }
