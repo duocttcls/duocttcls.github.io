@@ -116,7 +116,7 @@ export default {
   },
   methods: {
     delayedShow (data, index) {
-      let delay = 7500 * index
+      let delay = 3500 * index
       setTimeout(() => {
         data.show = true
       }, delay)
