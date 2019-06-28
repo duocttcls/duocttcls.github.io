@@ -17,94 +17,94 @@ export default {
   data() {
     return {
       images: [{
-        "image": "http://dummyimage.com/157x140.jpg/5fa2dd/ffffff",
+        "image": `${process.env.BASE_URL}images/1.jpg`,
         "show": false
       }, {
-        "image": "http://dummyimage.com/155x167.jpg/cc0000/ffffff",
+        "image": `${process.env.BASE_URL}images/2.jpg`,
         "show": false
       }, {
-        "image": "http://dummyimage.com/157x110.jpg/dddddd/000000",
+        "image": `${process.env.BASE_URL}images/3.jpg`,
         "show": false
       }, {
-        "image": "http://dummyimage.com/212x179.jpg/dddddd/000000",
+        "image": `${process.env.BASE_URL}images/4.jpg`,
         "show": false
       }, {
-        "image": "http://dummyimage.com/164x184.jpg/dddddd/000000",
+        "image": `${process.env.BASE_URL}images/5.jpg`,
         "show": false
       }, {
-        "image": "http://dummyimage.com/190x154.jpg/ff4444/ffffff",
+        "image": `${process.env.BASE_URL}images/6.jpg`,
         "show": false
       }, {
-        "image": "http://dummyimage.com/222x126.jpg/ff4444/ffffff",
+        "image": `${process.env.BASE_URL}images/7.jpg`,
         "show": false
       }, {
-        "image": "http://dummyimage.com/173x135.jpg/cc0000/ffffff",
+        "image": `${process.env.BASE_URL}images/8.jpg`,
         "show": false
       }, {
-        "image": "http://dummyimage.com/166x147.jpg/dddddd/000000",
+        "image": `${process.env.BASE_URL}images/9.jpg`,
         "show": false
       }, {
-        "image": "http://dummyimage.com/207x167.jpg/dddddd/000000",
+        "image": `${process.env.BASE_URL}images/10.jpg`,
         "show": false
       }, {
-        "image": "http://dummyimage.com/168x197.jpg/ff4444/ffffff",
+        "image": `${process.env.BASE_URL}images/11.jpg`,
         "show": false
       }, {
-        "image": "http://dummyimage.com/219x190.jpg/ff4444/ffffff",
+        "image": `${process.env.BASE_URL}images/12.jpg`,
         "show": false
       }, {
-        "image": "http://dummyimage.com/240x137.jpg/5fa2dd/ffffff",
+        "image": `${process.env.BASE_URL}images/13.jpg`,
         "show": false
       }, {
-        "image": "http://dummyimage.com/204x136.jpg/5fa2dd/ffffff",
+        "image": `${process.env.BASE_URL}images/14.jpg`,
         "show": false
       }, {
-        "image": "http://dummyimage.com/192x186.jpg/5fa2dd/ffffff",
+        "image": `${process.env.BASE_URL}images/15.jpg`,
         "show": false
       }, {
-        "image": "http://dummyimage.com/178x138.jpg/ff4444/ffffff",
+        "image": `${process.env.BASE_URL}images/16.jpg`,
         "show": false
       }, {
-        "image": "http://dummyimage.com/165x167.jpg/dddddd/000000",
+        "image": `${process.env.BASE_URL}images/17.jpg`,
         "show": false
       }, {
-        "image": "http://dummyimage.com/232x123.jpg/cc0000/ffffff",
+        "image": `${process.env.BASE_URL}images/18.jpg`,
         "show": false
       }, {
-        "image": "http://dummyimage.com/186x151.jpg/cc0000/ffffff",
+        "image": `${process.env.BASE_URL}images/19.jpg`,
         "show": false
       }, {
-        "image": "http://dummyimage.com/217x164.jpg/5fa2dd/ffffff",
+        "image": `${process.env.BASE_URL}images/20.jpg`,
         "show": false
       }, {
-        "image": "http://dummyimage.com/185x117.jpg/cc0000/ffffff",
+        "image": `${process.env.BASE_URL}images/21.jpg`,
         "show": false
       }, {
-        "image": "http://dummyimage.com/193x154.jpg/5fa2dd/ffffff",
+        "image": `${process.env.BASE_URL}images/22.jpg`,
         "show": false
       }, {
-        "image": "http://dummyimage.com/234x176.jpg/5fa2dd/ffffff",
+        "image": `${process.env.BASE_URL}images/23.jpg`,
         "show": false
       }, {
-        "image": "http://dummyimage.com/212x155.jpg/ff4444/ffffff",
+        "image": `${process.env.BASE_URL}images/24.jpg`,
         "show": false
       }, {
-        "image": "http://dummyimage.com/166x153.jpg/ff4444/ffffff",
+        "image": `${process.env.BASE_URL}images/25.jpg`,
         "show": false
       }, {
-        "image": "http://dummyimage.com/224x136.jpg/ff4444/ffffff",
+        "image": `${process.env.BASE_URL}images/26.jpg`,
         "show": false
       }, {
-        "image": "http://dummyimage.com/212x126.jpg/ff4444/ffffff",
+        "image": `${process.env.BASE_URL}images/27.jpg`,
         "show": false
       }, {
-        "image": "http://dummyimage.com/238x124.jpg/5fa2dd/ffffff",
+        "image": `${process.env.BASE_URL}images/28.jpg`,
         "show": false
       }, {
-        "image": "http://dummyimage.com/187x129.jpg/5fa2dd/ffffff",
+        "image": `${process.env.BASE_URL}images/29.jpg`,
         "show": false
       }, {
-        "image": "http://dummyimage.com/155x196.jpg/cc0000/ffffff",
+        "image": `${process.env.BASE_URL}images/30.jpg`,
         "show": false
       }]
     }
@@ -116,7 +116,7 @@ export default {
   },
   methods: {
     delayedShow (data, index) {
-      let delay = 3500 * index
+      let delay = 5000 * index
       setTimeout(() => {
         data.show = true
       }, delay)
@@ -130,7 +130,12 @@ export default {
     position: relative;
     width: 100%;
     height: 100%;
-    background: url(http://ppcdn.500px.org/75319705/1991f76c0c6a91ae1d23eb94ac5c7a9f7e79c480/2048.jpg) center center/cover no-repeat fixed
+    background: url(http://ppcdn.500px.org/75319705/1991f76c0c6a91ae1d23eb94ac5c7a9f7e79c480/2048.jpg) center center/cover no-repeat fixed;
+
+    .wrapper {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+    }
   }
 </style>
-

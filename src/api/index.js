@@ -23,10 +23,8 @@ export const ApiService = {
     let config = {
       top: this.randomTopPosition(),
       left: this.randomLeftPosition(),
-      width: `${this.getRandomNumber(150, 250)}px`,
-      height: `${this.getRandomNumber(100, 200)}px`,
-      timeScale: 1500,
-      timeSlide: 40000,
+      timeScale: 1000,
+      timeSlide: 90000,
       textIndent: `${this.getRandomNumber(-50, 50)}px`,
     }
     return config

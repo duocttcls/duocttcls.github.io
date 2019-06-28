@@ -19,9 +19,13 @@ export default {
   methods: {
     animateImage() {
       let $element = $(`.${this.classData}`),
-          config = ApiService.ramdomConfig(),
           elementWidth = $element.width(),
+          elementHeight = $element.height(),
+          config = ApiService.ramdomConfig(),
           leftPosition = config.left - elementWidth * 3
+
+      config.width = elementWidth * 0.2
+      config.height = elementHeight * 0.2
 
       Animation.scaleImage($element, config, leftPosition)
     }
@@ -38,18 +42,14 @@ export default {
     position: absolute;
     top: 50%;
     left: 50%;
-    width: 50%;
-    height: 50%;
-    padding: 20px;
-    text-indent: inherit;
+    width: 90%;
+    height: 90%;
+    text-align: center;
     animation: fadein 1s;
     transform: translate(-50%, -50%);
 
     img {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
+      width: auto;
       height: 100%;
       border: 5px solid #fff;
     }

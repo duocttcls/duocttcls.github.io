@@ -2,8 +2,8 @@ export const Animation = {
   scaleImage($element, config, leftPosition) {
     $element
         .css({
-          top: '25%',
-          left: '25%'
+          top: '5%',
+          left: '5%'
         })
         .animate({
           top: config.top,
