@@ -20,13 +20,14 @@ export const ApiService = {
     return this.getWindowWidth() - this.getRandomNumber(200, 500)
   },
   ramdomConfig() {
-    let config = {
-      top: this.randomTopPosition(),
-      left: this.randomLeftPosition(),
-      timeScale: 1000,
-      timeSlide: 90000,
-      textIndent: `${this.getRandomNumber(-50, 50)}px`,
-    }
+    let timeSlide = this.getRandomNumber(30, 120) * 1000,
+        config = {
+          top: this.randomTopPosition(),
+          left: this.randomLeftPosition(),
+          timeScale: 1000,
+          timeSlide: timeSlide,
+          textIndent: `${this.getRandomNumber(-50, 50)}px`,
+        }
     return config
   }
 }
