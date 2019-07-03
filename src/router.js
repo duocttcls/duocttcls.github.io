@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import Home from './views/Home.vue'
+import SlideMovie2 from './views/SlideMovie2.vue'
 
 Vue.use(Router)
 
@@ -12,6 +13,11 @@ export default new Router({
       path: '/',
       name: 'home',
       component: Home
+    },
+    {
+      path: '/movie-2',
+      name: 'SlideMovie2',
+      component: SlideMovie2
     },
     {
       path: '/about',
