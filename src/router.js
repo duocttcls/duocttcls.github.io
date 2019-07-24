@@ -10,12 +10,12 @@ export default new Router({
   base: process.env.BASE_URL,
   routes: [
     {
-      path: '/',
+      path: '/movie-2',
       name: 'home',
       component: Home
     },
     {
-      path: '/movie-2',
+      path: '/',
       name: 'SlideMovie2',
       component: SlideMovie2
     },
