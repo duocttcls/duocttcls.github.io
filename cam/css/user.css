@@ -1,3 +1,9 @@
+#voice-pc {
+    display: none;
+}
+#voice-smartphone .item .list {
+    font-size: 14px;
+}
 .voice-detail .voice-content .voice-title{
     font-size: 24px;
 }
