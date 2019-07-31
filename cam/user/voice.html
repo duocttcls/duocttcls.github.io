@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Webvoicememo.</title>
+    <title>Voice List</title>
     <meta name="description" content="description here">
     <meta name="keywords" content="keywords,here">
 	
@@ -16,63 +16,59 @@
 	<nav id="header" class="bg-white fixed w-full z-10 top-0 shadow">
 		<div class="w-full container mx-auto flex flex-wrap items-center mt-0 pt-3 pb-3 md:pb-0">
 			<div class="w-1/2 pl-2 md:pl-0 .bg-indigo-800">
-				<a class="text-gray-900 text-base xl:text-xl no-underline hover:no-underline font-bold"  href="index.html"> 
+				<a class="text-gray-900 text-base xl:text-xl no-underline hover:no-underline font-bold" href="voice.html"> 
 					<i class="fas fa-sun text-orange-600 pr-3"></i> Webvoicememo
 				</a>
             </div>
 			<div class="w-1/2 pr-0">
 				<div class="flex relative inline-block float-right">
-				  <div class="relative text-sm">
-					  <button id="userButton" class="flex items-center focus:outline-none mr-3">
-						<img class="w-8 h-8 rounded-full mr-4" src="http://i.pravatar.cc/300" alt="Avatar of User"> <span class="hidden md:inline-block">Hi, User </span>
-						<svg class="pl-2 h-2" version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 129 129" xmlns:xlink="http://www.w3.org/1999/xlink" enable-background="new 0 0 129 129"><g><path d="m121.3,34.6c-1.6-1.6-4.2-1.6-5.8,0l-51,51.1-51.1-51.1c-1.6-1.6-4.2-1.6-5.8,0-1.6,1.6-1.6,4.2 0,5.8l53.9,53.9c0.8,0.8 1.8,1.2 2.9,1.2 1,0 2.1-0.4 2.9-1.2l53.9-53.9c1.7-1.6 1.7-4.2 0.1-5.8z"/></g></svg>
-					  </button>
-					  <div id="userMenu" class="bg-white rounded shadow-md mt-2 absolute mt-12 top-0 right-0 min-w-full overflow-auto z-30 invisible">
-						  <ul class="list-reset">
-							<li><a href="#" class="px-4 py-2 block text-gray-900 hover:bg-gray-400 no-underline hover:no-underline">My account</a></li>
-							<li><a href="#" class="px-4 py-2 block text-gray-900 hover:bg-gray-400 no-underline hover:no-underline">Notifications</a></li>
-							<li><hr class="border-t mx-2 border-gray-400"></li>
-							<li><a href="#" class="px-4 py-2 block text-gray-900 hover:bg-gray-400 no-underline hover:no-underline">Logout</a></li>
-						  </ul>
-					  </div>
-				  </div>
-					<div class="block lg:hidden pr-4">
-						<button id="nav-toggle" class="flex items-center px-3 py-2 border rounded text-gray-500 border-gray-600 hover:text-gray-900 hover:border-teal-500 appearance-none focus:outline-none">
-							<svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>Menu</title><path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"/></svg>
+				   <div class="relative text-sm">
+						<button id="userButton" class="flex items-center focus:outline-none mr-3">
+							<img class="w-8 h-8 rounded-full mr-4" src="../img/avatar-1.jpg" alt="Avatar of User"> <span>Hi, User </span>
 						</button>
-					</div>
+						<div id="userMenu" class="bg-white rounded shadow-md mt-2 absolute mt-12 top-0 right-0 min-w-full overflow-auto z-30 invisible">
+							<ul class="list-reset">
+								<!-- <li><a href="#" class="px-4 py-2 block text-gray-900 hover:bg-gray-400 no-underline hover:no-underline">My account</a></li>
+								<li><a href="#" class="px-4 py-2 block text-gray-900 hover:bg-gray-400 no-underline hover:no-underline">Notifications</a></li>
+								<li><hr class="border-t mx-2 border-gray-400"></li> -->
+								<li><a href="#" class="px-4 py-2 block text-gray-900 hover:bg-gray-400 no-underline hover:no-underline">ログアウト</a></li>
+							</ul>
+						</div>
+				   </div>
 				</div>
 			</div>
-
-			<div class="w-full flex-grow lg:flex lg:items-center lg:w-auto hidden lg:block mt-2 lg:mt-0 bg-white z-20" id="nav-content">
-				<ul class="list-reset lg:flex flex-1 items-center px-4 md:px-0">
-					<li class="mr-6 my-2 md:my-0">
-                        <a href="voice.html" class="block py-1 md:py-3 pl-1 align-middle text-orange-600 no-underline hover:text-gray-900 border-b-2 border-orange-600 hover:border-pink-500">
-                            <i class="fas fa-microphone fa-fw mr-3"></i><span class="pb-1 md:pb-0 text-sm">Voice</span>
-                        </a>
-					</li>
-					<li class="mr-6 my-2 md:my-0">
-                        <a href="#" class="block py-1 md:py-3 pl-1 align-middle text-gray-500 no-underline hover:text-gray-900 border-b-2 border-white  hover:border-orange-600">
-                            <i class="fas fa-bookmark fa-fw mr-3"></i><span class="pb-1 md:pb-0 text-sm">Bookmark </span>
-                        </a>
-					</li>
-					<li class="mr-6 my-2 md:my-0">
-						<a href="#" class="block py-1 md:py-3 pl-1 align-middle text-gray-500 no-underline hover:text-gray-900 border-b-2 border-white  hover:border-orange-600">
-							<i class="fas fa-history fa-fw mr-3"></i><span class="pb-1 md:pb-0 text-sm">History</span>
-						</a>
-					</li>
-					<li class="mr-6 my-2 md:my-0">
-						<a href="#" class="block py-1 md:py-3 pl-1 align-middle text-gray-500 no-underline hover:text-gray-900 border-b-2 border-white  hover:border-orange-600">
-							<i class="fas fa-key fa-fw mr-3"></i><span class="pb-1 md:pb-0 text-sm">Change Password</span>
-						</a>
-					</li>
-				</ul>
+		</div>
+		<div class="bg-blue">
+			<div class="w-full container mx-auto flex flex-wrap items-center">
+				<div class="w-full" id="nav-menu">
+					<ul class="list-reset">
+						<li>
+							<a href="voice.html" class="block py-1 md:py-3 pl-1 align-middle text-orange-500 no-underline hover:text-gray-900 border-b-2 border-orange-600 hover:border-pink-500">
+								<i class="fas fa-microphone fa-fw mr-3"></i><br><span class="pb-1 md:pb-0 text-sm">検索</span>
+							</a>
+						</li>
+						<li>
+							<a href="bookmark.html" class="block py-1 md:py-3 pl-1 align-middle text-white no-underline hover:text-gray-900 hover:border-orange-600">
+								<i class="fas fa-bookmark fa-fw mr-3"></i><br><span class="pb-1 md:pb-0 text-sm">気になる</span>
+							</a>
+						</li>
+						<li>
+							<a href="history.html" class="block py-1 md:py-3 pl-1 align-middle text-white no-underline hover:text-gray-900 hover:border-orange-600">
+								<i class="fas fa-history fa-fw mr-3"></i><br><span class="pb-1 md:pb-0 text-sm">履歴</span>
+							</a>
+						</li>
+						<li>
+							<a href="change-password.html" class="block py-1 md:py-3 pl-1 align-middle text-white no-underline hover:text-gray-900 hover:border-orange-600">
+								<i class="fas fa-key fa-fw mr-3"></i><br><span class="pb-1 md:pb-0 text-sm"> パスワード変更</span>
+							</a>
+						</li>
+					</ul>
+				</div>
 			</div>
 		</div>
 	</nav>
 
-	<!--Container-->
-	<div class="container w-full mx-auto pt-20 mb-6 mt-10">
+	<div class="container w-full mx-auto" id="main">
 		<div class="flex-row px-4">
 			<div class="bg-white border rounded shadow p-2">
 				<div class="flex flex-wrap">
@@ -100,167 +96,179 @@
 							<option>Category 2</option>
 						</select>
 					</div>
-					<div class="w-full px-1 mb-4 text-center">
-						<button class="bg-blue-700 hover:bg-blue-900 justify-center text-white font-bold py-0 border border-blue-700 rounded h-8 w-24">検索</button>
+					<div class="w-full px-1 mb-2 text-center">
+						<button class="bg-blue hover:bg-blue-900 justify-center text-white font-bold py-0 border border-blue-700 rounded h-8 w-24">検索</button>
 					</div>
 				</div>
 			</div>
-	
-			<div class="bg-white border rounded shadow mt-6">
-				<div class="p-5">
-					<table class="w-full p-5 text-gray-700" id="voice-pc">
-						<thead>
-							<tr class="border-b border-grey-light">
-								<th class="text-left text-blue-900">No.</th>
-								<th class="text-left text-blue-900">Title</th>
-								<th class="text-left text-blue-900">User</th>
-								<th class="text-left text-blue-900">Tag</th>
-								<th class="text-left text-blue-900">Category</th>
-								<th class="text-left text-blue-900">date</th>
-							</tr>
-						</thead>
-						<tbody>
-							<tr class="border-b border-grey-light hover:bg-blue-100 cursor-pointer h-10" onclick="voiceDetail()">
-								<td>1</td>
-								<td>タイトル 1</td>
-								<td>アップロードユーザー 1</td>
-								<td>タグ 1</td>
-								<td>カテゴリ 1</td>
-								<td>2019/07/10 09:00</td>
-							</tr>                              
-							<tr class="border-b border-grey-light hover:bg-blue-100 cursor-pointer h-10" onclick="voiceDetail()">
-								<td>2</td>
-								<td>タイトル 2</td>
-								<td>アップロードユーザー 2</td>
-								<td>タグ 2</td>
-								<td>カテゴリ 2</td>
-								<td>2019/07/10 09:00</td>
-							</tr>                              
-							<tr class="border-b border-grey-light hover:bg-blue-100 cursor-pointer h-10" onclick="voiceDetail()">
-								<td>3</td>
-								<td>タイトル 3</td>
-								<td>アップロードユーザー 3</td>
-								<td>タグ 3</td>
-								<td>カテゴリ 3</td>
-								<td>2019/07/10 09:00</td>
-							</tr>                              
-							<tr class="border-b border-grey-light hover:bg-blue-100 cursor-pointer h-10" onclick="voiceDetail()">
-								<td>4</td>
-								<td>タイトル</td>
-								<td>アップロードユーザー</td>
-								<td>タグ</td>
-								<td>カテゴリ</td>
-								<td>2019/07/10 09:00</td>
-							</tr>
-							<tr class="border-b border-grey-light hover:bg-blue-100 cursor-pointer h-10" onclick="voiceDetail()">
-								<td>5</td>
-								<td>タイトル</td>
-								<td>アップロードユーザー</td>
-								<td>タグ</td>
-								<td>カテゴリ</td>
-								<td>2019/07/10 09:00</td>
-							</tr>
-							<tr class="border-b border-grey-light hover:bg-blue-100 cursor-pointer h-10" onclick="voiceDetail()">
-								<td>1</td>
-								<td>タイトル 1</td>
-								<td>アップロードユーザー 1</td>
-								<td>タグ 1</td>
-								<td>カテゴリ 1</td>
-								<td>2019/07/10 09:00</td>
-							</tr>                              
-							<tr class="border-b border-grey-light hover:bg-blue-100 cursor-pointer h-10" onclick="voiceDetail()">
-								<td>2</td>
-								<td>タイトル 2</td>
-								<td>アップロードユーザー 2</td>
-								<td>タグ 2</td>
-								<td>カテゴリ 2</td>
-								<td>2019/07/10 09:00</td>
-							</tr>                              
-						</tbody>
-					</table>
 
-					<div id="voice-smartphone">
-						<div class="item border-b border-grey-light hover:bg-blue-100 cursor-pointer" onclick="voiceDetail()">
-							<h3 class="title font-bold text-black-600 pt-2">Title Voice</h3>
-							<p class="user text-gray-600 text-xs">User</p>
-							<p class="list text-gray-600 pb-2 text-right">
-								<span class="tag">Tag</span> | 
-								<span class="category">Category</span> | 
-								<span class="date">2019/07/10 09:00</span>
-							</p>
+			<div id="voice-list" class="mt-8">
+				<div class="item border-b hover:bg-white cursor-pointer flex flex-wrap pb-2 pt-2" onclick="voiceDetail()">
+					<div class="item-left sm:w-1/2">
+						<div class="float-left">
+							<img src="../img/avatar.jpg" alt="" width="100px">
 						</div>
-						<div class="item border-b border-grey-light hover:bg-blue-100 cursor-pointer" onclick="voiceDetail()">
-							<h3 class="title font-bold text-black-600 pt-2">Title Voice 1</h3>
-							<p class="user text-gray-600 text-xs">User 1</p>
-							<p class="list text-gray-600 pb-2 text-right">
-								<span class="tag">Tag 1</span> | 
-								<span class="category">Category 1</span> | 
-								<span class="date">2019/07/10 09:00</span>
-							</p>     
-						</div>
-						<div class="item border-b border-grey-light hover:bg-blue-100 cursor-pointer" onclick="voiceDetail()">
-							<h3 class="title font-bold text-black-600 pt-2">Title Voice 2</h3>
-							<p class="user text-gray-600 text-xs">User 2</p>
-							<p class="list text-gray-600 pb-2 text-right">
-								<span class="tag">Tag 2</span> | 
-								<span class="category">Category 2</span> | 
-								<span class="date">2019/07/10 09:00</span>
-							</p>     
-						</div>
-						<div class="item border-b border-grey-light hover:bg-blue-100 cursor-pointer" onclick="voiceDetail()">
-							<h3 class="title font-bold text-black-600 pt-2">Title Voice 3</h3>
-							<p class="user text-gray-600 text-xs">User 3</p>
-							<p class="list text-gray-600 pb-2 text-right">
-								<span class="tag">Tag 3</span> | 
-								<span class="category">Category 3</span> | 
-								<span class="date">2019/07/10 09:00</span>
-							</p>     
-						</div>
-						<div class="item border-b border-grey-light hover:bg-blue-100 cursor-pointer" onclick="voiceDetail()">
-							<h3 class="title font-bold text-black-600 pt-2">Title Voice 4</h3>
-							<p class="user text-gray-600 text-xs">User 4</p>
-							<p class="list text-gray-600 pb-2 text-right">
-								<span class="tag">Tag 4</span> | 
-								<span class="category">Category 4</span> | 
-								<span class="date">2019/07/10 09:00</span>
-							</p>     
-						</div>
-						<div class="item border-b border-grey-light hover:bg-blue-100 cursor-pointer" onclick="voiceDetail()">
-							<h3 class="title font-bold text-black-600 pt-2">Title Voice 5</h3>
-							<p class="user text-gray-600 text-xs">User 5</p>
-							<p class="list text-gray-600 pb-2 text-right">
-								<span class="tag">Tag 5</span> | 
-								<span class="category">Category 5</span> | 
-								<span class="date">2019/07/10 09:00</span>
-							</p>     
-						</div>
-						<div class="item border-b border-grey-light hover:bg-blue-100 cursor-pointer" onclick="voiceDetail()">
-							<h3 class="title font-bold text-black-600 pt-2">Title Voice 6</h3>
-							<p class="user text-gray-600 text-xs">User 6</p>
-							<p class="list text-gray-600 pb-2 text-right">
-								<span class="tag">Tag 6</span> | 
-								<span class="category">Category 6</span> | 
-								<span class="date">2019/07/10 09:00</span>
-							</p>     
+						<div class="float-left pl-2">
+							<h3 class="Title text-2xl">Voice Title</h3>
+							<p class="user text-gray-600 text-xs mt-2 mb-2">Username</p>
+							<p class="time text-gray-700 text-sm">02:03</p>
 						</div>
 					</div>
-	
-					<p class="py-2">
-						<ul class="flex list-reset border border-grey-light rounded w-auto font-sans">
-							<li><a class="block hover:text-white hover:bg-blue-700 text-blue-500 border-r border-grey-light px-2 py-1" href="#">Previous</a></li>
-							<li><a class="block hover:text-white hover:bg-blue-700 text-blue-500 border-r border-grey-light px-2 py-1" href="#">1</a></li>
-							<li><a class="block hover:text-white hover:bg-blue-700 text-blue-500 border-r border-grey-light px-2 py-1" href="#">2</a></li>
-							<li><a class="block text-white bg-blue-700 border-r border-blue px-2 py-1" href="#">3</a></li>
-							<li><a class="block hover:text-white hover:bg-blue-700 text-blue-500 px-2 py-1" href="#">Next</a></li>
-						</ul>
-					</p>
+					<div class="item-right ">
+						<p class="date">2019/07/10 09:00</p>
+						<p class="tag mt-2 mb-2">Tag</p>
+						<p class="category">Category</p>
+					</div>
 				</div>
-			</div>   
+
+				<div class="item border-b hover:bg-white cursor-pointer flex flex-wrap pb-2 pt-2" onclick="voiceDetail()">
+					<div class="item-left sm:w-1/2">
+						<div class="float-left">
+							<img src="../img/avatar-1.jpg" alt="" width="100px">
+						</div>
+						<div class="float-left pl-2">
+							<h3 class="Title text-2xl">Voice Title</h3>
+							<p class="user text-gray-600 text-xs mt-2 mb-2">Username</p>
+							<p class="time text-gray-700 text-sm">02:03</p>
+						</div>
+					</div>
+					<div class="item-right ">
+						<p class="date">2019/07/10 09:00</p>
+						<p class="tag mt-2 mb-2">Tag</p>
+						<p class="category">Category</p>
+					</div>
+				</div>
+
+				<div class="item border-b hover:bg-white cursor-pointer flex flex-wrap pb-2 pt-2" onclick="voiceDetail()">
+					<div class="item-left sm:w-1/2">
+						<div class="float-left">
+							<img src="../img/avatar-2.jpg" alt="" width="100px">
+						</div>
+						<div class="float-left pl-2">
+							<h3 class="Title text-2xl">Voice Title</h3>
+							<p class="user text-gray-600 text-xs mt-2 mb-2">Username</p>
+							<p class="time text-gray-700 text-sm">02:03</p>
+						</div>
+					</div>
+					<div class="item-right ">
+						<p class="date">2019/07/10 09:00</p>
+						<p class="tag mt-2 mb-2">Tag</p>
+						<p class="category">Category</p>
+					</div>
+				</div>
+
+				<div class="item border-b hover:bg-white cursor-pointer flex flex-wrap pb-2 pt-2" onclick="voiceDetail()">
+					<div class="item-left sm:w-1/2">
+						<div class="float-left">
+							<img src="../img/avatar.jpg" alt="" width="100px">
+						</div>
+						<div class="float-left pl-2">
+							<h3 class="Title text-2xl">Voice Title</h3>
+							<p class="user text-gray-600 text-xs mt-2 mb-2">Username</p>
+							<p class="time text-gray-700 text-sm">02:03</p>
+						</div>
+					</div>
+					<div class="item-right ">
+						<p class="date">2019/07/10 09:00</p>
+						<p class="tag mt-2 mb-2">Tag</p>
+						<p class="category">Category</p>
+					</div>
+				</div>
+
+				<div class="item border-b hover:bg-white cursor-pointer flex flex-wrap pb-2 pt-2" onclick="voiceDetail()">
+					<div class="item-left sm:w-1/2">
+						<div class="float-left">
+							<img src="../img/avatar-1.jpg" alt="" width="100px">
+						</div>
+						<div class="float-left pl-2">
+							<h3 class="Title text-2xl">Voice Title</h3>
+							<p class="user text-gray-600 text-xs mt-2 mb-2">Username</p>
+							<p class="time text-gray-700 text-sm">02:03</p>
+						</div>
+					</div>
+					<div class="item-right ">
+						<p class="date">2019/07/10 09:00</p>
+						<p class="tag mt-2 mb-2">Tag</p>
+						<p class="category">Category</p>
+					</div>
+				</div>
+
+				<div class="item border-b hover:bg-white cursor-pointer flex flex-wrap pb-2 pt-2" onclick="voiceDetail()">
+					<div class="item-left sm:w-1/2">
+						<div class="float-left">
+							<img src="../img/avatar-2.jpg" alt="" width="100px">
+						</div>
+						<div class="float-left pl-2">
+							<h3 class="Title text-2xl">Voice Title</h3>
+							<p class="user text-gray-600 text-xs mt-2 mb-2">Username</p>
+							<p class="time text-gray-700 text-sm">02:03</p>
+						</div>
+					</div>
+					<div class="item-right ">
+						<p class="date">2019/07/10 09:00</p>
+						<p class="tag mt-2 mb-2">Tag</p>
+						<p class="category">Category</p>
+					</div>
+				</div>
+
+				<div class="item border-b hover:bg-white cursor-pointer flex flex-wrap pb-2 pt-2" onclick="voiceDetail()">
+					<div class="item-left sm:w-1/2">
+						<div class="float-left">
+							<img src="../img/avatar.jpg" alt="" width="100px">
+						</div>
+						<div class="float-left pl-2">
+							<h3 class="Title text-2xl">Voice Title</h3>
+							<p class="user text-gray-600 text-xs mt-2 mb-2">Username</p>
+							<p class="time text-gray-700 text-sm">02:03</p>
+						</div>
+					</div>
+					<div class="item-right ">
+						<p class="date">2019/07/10 09:00</p>
+						<p class="tag mt-2 mb-2">Tag</p>
+						<p class="category">Category</p>
+					</div>
+				</div>
+
+				<div class="item border-b hover:bg-white cursor-pointer flex flex-wrap pb-2 pt-2" onclick="voiceDetail()">
+					<div class="item-left sm:w-1/2">
+						<div class="float-left">
+							<img src="../img/avatar-1.jpg" alt="" width="100px">
+						</div>
+						<div class="float-left pl-2">
+							<h3 class="Title text-2xl">Voice Title</h3>
+							<p class="user text-gray-600 text-xs mt-2 mb-2">Username</p>
+							<p class="time text-gray-700 text-sm">02:03</p>
+						</div>
+					</div>
+					<div class="item-right ">
+						<p class="date">2019/07/10 09:00</p>
+						<p class="tag mt-2 mb-2">Tag</p>
+						<p class="category">Category</p>
+					</div>
+				</div>
+
+				<div class="item border-b hover:bg-white cursor-pointer flex flex-wrap pb-2 pt-2" onclick="voiceDetail()">
+					<div class="item-left sm:w-1/2">
+						<div class="float-left">
+							<img src="../img/avatar-2.jpg" alt="" width="100px">
+						</div>
+						<div class="float-left pl-2">
+							<h3 class="Title text-2xl">Voice Title</h3>
+							<p class="user text-gray-600 text-xs mt-2 mb-2">Username</p>
+							<p class="time text-gray-700 text-sm">02:03</p>
+						</div>
+					</div>
+					<div class="item-right ">
+						<p class="date">2019/07/10 09:00</p>
+						<p class="tag mt-2 mb-2">Tag</p>
+						<p class="category">Category</p>
+					</div>
+				</div>
+			</div>
 		</div>
-	</div> 
-	<!--/container-->
+	</div>
 	
-	<footer class="bg-white border-t border-gray-400 shadow">	
+	<!-- <footer class="bg-white border-t border-gray-400 shadow">	
 		<div class="container max-w-md mx-auto flex py-8">
 			<div class="w-full mx-auto flex flex-wrap justify-center">
 				<div class="flex w-full md:w-1/2 justify-center">
@@ -268,7 +276,7 @@
 				</div>
 			</div>
 		</div>
-	</footer>
+	</footer> -->
 
 	<script>
 		var userMenuDiv = document.getElementById("userMenu");

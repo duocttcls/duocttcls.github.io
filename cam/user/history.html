@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>history</title>
+    <meta name="description" content="description here">
+    <meta name="keywords" content="keywords,here">
+	
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <link href="../css/styles.css" rel="stylesheet"> <!--Replace with your tailwind.css once created-->
+    <link href="../css/user.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100 font-sans leading-normal tracking-normal">
+	<nav id="header" class="bg-white fixed w-full z-10 top-0 shadow">
+		<div class="w-full container mx-auto flex flex-wrap items-center mt-0 pt-3 pb-3 md:pb-0">
+			<div class="w-1/2 pl-2 md:pl-0 .bg-indigo-800">
+				<a class="text-gray-900 text-base xl:text-xl no-underline hover:no-underline font-bold" href="voice.html"> 
+					<i class="fas fa-sun text-orange-600 pr-3"></i> Webvoicememo
+				</a>
+			</div>
+			<div class="w-1/2 pr-0">
+				<div class="flex relative inline-block float-right">
+					<div class="relative text-sm">
+						<button id="userButton" class="flex items-center focus:outline-none mr-3">
+							<img class="w-8 h-8 rounded-full mr-4" src="../img/avatar-1.jpg" alt="Avatar of User"> <span>Hi, User </span>
+						</button>
+						<div id="userMenu" class="bg-white rounded shadow-md mt-2 absolute mt-12 top-0 right-0 min-w-full overflow-auto z-30 invisible">
+							<ul class="list-reset">
+								<li><a href="#" class="px-4 py-2 block text-gray-900 hover:bg-gray-400 no-underline hover:no-underline">ログアウト</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="bg-blue">
+			<div class="w-full container mx-auto flex flex-wrap items-center">
+				<div class="w-full" id="nav-menu">
+					<ul class="list-reset">
+						<li>
+							<a href="voice.html" class="block py-1 md:py-3 pl-1 align-middle text-white no-underline hover:text-gray-900 hover:border-orange-600">
+								<i class="fas fa-microphone fa-fw mr-3"></i><br><span class="pb-1 md:pb-0 text-sm">検索</span>
+							</a>
+						</li>
+						<li>
+							<a href="bookmark.html" class="block py-1 md:py-3 pl-1 align-middle text-white no-underline hover:text-gray-900 hover:border-orange-600">
+								<i class="fas fa-bookmark fa-fw mr-3"></i><br><span class="pb-1 md:pb-0 text-sm">気になる</span>
+							</a>
+						</li>
+						<li>
+							<a href="history.html" class="block py-1 md:py-3 pl-1 align-middle text-orange-500 no-underline hover:text-gray-900 border-b-2 border-orange-600 hover:border-pink-500">
+								<i class="fas fa-history fa-fw mr-3"></i><br><span class="pb-1 md:pb-0 text-sm">履歴</span>
+							</a>
+						</li>
+						<li>
+							<a href="change-password.html" class="block py-1 md:py-3 pl-1 align-middle text-white no-underline hover:text-gray-900 hover:border-orange-600">
+								<i class="fas fa-key fa-fw mr-3"></i><br><span class="pb-1 md:pb-0 text-sm"> パスワード変更</span>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</nav>
+
+	<div class="container w-full mx-auto" id="main">
+		<div class="flex-row px-4">
+			<div id="voice-list" class="mt-8">
+				<div class="item border-b hover:bg-white cursor-pointer flex flex-wrap pb-2 pt-2" onclick="voiceDetail()">
+					<div class="item-left sm:w-1/2">
+						<div class="float-left">
+							<img src="../img/avatar.jpg" alt="" width="100px">
+						</div>
+						<div class="float-left pl-2">
+							<h3 class="Title text-2xl">Voice Title</h3>
+							<p class="user text-gray-600 text-xs mt-2 mb-2">Username</p>
+							<p class="time text-gray-700 text-sm">02:03</p>
+						</div>
+					</div>
+					<div class="item-right ">
+						<p class="date">2019/07/10 09:00</p>
+						<p class="tag mt-2 mb-2">Tag</p>
+						<p class="category">Category</p>
+					</div>
+				</div>
+
+				<div class="item border-b hover:bg-white cursor-pointer flex flex-wrap pb-2 pt-2" onclick="voiceDetail()">
+					<div class="item-left sm:w-1/2">
+						<div class="float-left">
+							<img src="../img/avatar-1.jpg" alt="" width="100px">
+						</div>
+						<div class="float-left pl-2">
+							<h3 class="Title text-2xl">Voice Title</h3>
+							<p class="user text-gray-600 text-xs mt-2 mb-2">Username</p>
+							<p class="time text-gray-700 text-sm">02:03</p>
+						</div>
+					</div>
+					<div class="item-right ">
+						<p class="date">2019/07/10 09:00</p>
+						<p class="tag mt-2 mb-2">Tag</p>
+						<p class="category">Category</p>
+					</div>
+				</div>
+
+				<div class="item border-b hover:bg-white cursor-pointer flex flex-wrap pb-2 pt-2" onclick="voiceDetail()">
+					<div class="item-left sm:w-1/2">
+						<div class="float-left">
+							<img src="../img/avatar-2.jpg" alt="" width="100px">
+						</div>
+						<div class="float-left pl-2">
+							<h3 class="Title text-2xl">Voice Title</h3>
+							<p class="user text-gray-600 text-xs mt-2 mb-2">Username</p>
+							<p class="time text-gray-700 text-sm">02:03</p>
+						</div>
+					</div>
+					<div class="item-right ">
+						<p class="date">2019/07/10 09:00</p>
+						<p class="tag mt-2 mb-2">Tag</p>
+						<p class="category">Category</p>
+					</div>
+				</div>
+
+				<div class="item border-b hover:bg-white cursor-pointer flex flex-wrap pb-2 pt-2" onclick="voiceDetail()">
+					<div class="item-left sm:w-1/2">
+						<div class="float-left">
+							<img src="../img/avatar.jpg" alt="" width="100px">
+						</div>
+						<div class="float-left pl-2">
+							<h3 class="Title text-2xl">Voice Title</h3>
+							<p class="user text-gray-600 text-xs mt-2 mb-2">Username</p>
+							<p class="time text-gray-700 text-sm">02:03</p>
+						</div>
+					</div>
+					<div class="item-right ">
+						<p class="date">2019/07/10 09:00</p>
+						<p class="tag mt-2 mb-2">Tag</p>
+						<p class="category">Category</p>
+					</div>
+				</div>
+
+				<div class="item border-b hover:bg-white cursor-pointer flex flex-wrap pb-2 pt-2" onclick="voiceDetail()">
+					<div class="item-left sm:w-1/2">
+						<div class="float-left">
+							<img src="../img/avatar-1.jpg" alt="" width="100px">
+						</div>
+						<div class="float-left pl-2">
+							<h3 class="Title text-2xl">Voice Title</h3>
+							<p class="user text-gray-600 text-xs mt-2 mb-2">Username</p>
+							<p class="time text-gray-700 text-sm">02:03</p>
+						</div>
+					</div>
+					<div class="item-right ">
+						<p class="date">2019/07/10 09:00</p>
+						<p class="tag mt-2 mb-2">Tag</p>
+						<p class="category">Category</p>
+					</div>
+				</div>
+
+				<div class="item border-b hover:bg-white cursor-pointer flex flex-wrap pb-2 pt-2" onclick="voiceDetail()">
+					<div class="item-left sm:w-1/2">
+						<div class="float-left">
+							<img src="../img/avatar-2.jpg" alt="" width="100px">
+						</div>
+						<div class="float-left pl-2">
+							<h3 class="Title text-2xl">Voice Title</h3>
+							<p class="user text-gray-600 text-xs mt-2 mb-2">Username</p>
+							<p class="time text-gray-700 text-sm">02:03</p>
+						</div>
+					</div>
+					<div class="item-right ">
+						<p class="date">2019/07/10 09:00</p>
+						<p class="tag mt-2 mb-2">Tag</p>
+						<p class="category">Category</p>
+					</div>
+				</div>
+
+				<div class="item border-b hover:bg-white cursor-pointer flex flex-wrap pb-2 pt-2" onclick="voiceDetail()">
+					<div class="item-left sm:w-1/2">
+						<div class="float-left">
+							<img src="../img/avatar.jpg" alt="" width="100px">
+						</div>
+						<div class="float-left pl-2">
+							<h3 class="Title text-2xl">Voice Title</h3>
+							<p class="user text-gray-600 text-xs mt-2 mb-2">Username</p>
+							<p class="time text-gray-700 text-sm">02:03</p>
+						</div>
+					</div>
+					<div class="item-right ">
+						<p class="date">2019/07/10 09:00</p>
+						<p class="tag mt-2 mb-2">Tag</p>
+						<p class="category">Category</p>
+					</div>
+				</div>
+
+				<div class="item border-b hover:bg-white cursor-pointer flex flex-wrap pb-2 pt-2" onclick="voiceDetail()">
+					<div class="item-left sm:w-1/2">
+						<div class="float-left">
+							<img src="../img/avatar-1.jpg" alt="" width="100px">
+						</div>
+						<div class="float-left pl-2">
+							<h3 class="Title text-2xl">Voice Title</h3>
+							<p class="user text-gray-600 text-xs mt-2 mb-2">Username</p>
+							<p class="time text-gray-700 text-sm">02:03</p>
+						</div>
+					</div>
+					<div class="item-right ">
+						<p class="date">2019/07/10 09:00</p>
+						<p class="tag mt-2 mb-2">Tag</p>
+						<p class="category">Category</p>
+					</div>
+				</div>
+
+				<div class="item border-b hover:bg-white cursor-pointer flex flex-wrap pb-2 pt-2" onclick="voiceDetail()">
+					<div class="item-left sm:w-1/2">
+						<div class="float-left">
+							<img src="../img/avatar-2.jpg" alt="" width="100px">
+						</div>
+						<div class="float-left pl-2">
+							<h3 class="Title text-2xl">Voice Title</h3>
+							<p class="user text-gray-600 text-xs mt-2 mb-2">Username</p>
+							<p class="time text-gray-700 text-sm">02:03</p>
+						</div>
+					</div>
+					<div class="item-right ">
+						<p class="date">2019/07/10 09:00</p>
+						<p class="tag mt-2 mb-2">Tag</p>
+						<p class="category">Category</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script>
+		function voiceDetail() {
+			window.location.href = "voice-detail.html";
+		}
+	</script>
+</body>
+</html>
